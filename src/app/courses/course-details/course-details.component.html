@@ -1,0 +1,59 @@
+<div *ngIf="!course">
+    course not found
+</div>
+
+<div *ngIf="course">
+
+</div>
+
+<div class="container">
+	<div class="row" style="margin-left: 175px;">
+		<div class="col-xs-4 item-photo">
+			<img style="max-width:300px; margin-right: 20px;" src={{course.imageUrl}} onerror='this.style.display = "none"'/>
+		</div>
+		<div class="col-xs-5" style="border:0px solid gray">
+			<h3>{{course.name}} <small style="color:#337ab7;"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star-half"></i></small></h3>
+
+			<div style="width:100%;border-top:1px solid silver">
+				<p style="padding:1px;">
+					{{course.description}}
+				</p>                    
+			</div>               
+
+			<div class="section" style="padding-bottom:20px; float: right; padding-top: 10px;">
+				<a (click)="goBack()" class="btn btn-primary" style="padding: 5px; margin-right: 5px;"><span style="color: white;">Back</span></a>
+				<a href="/courses/{{course.id}}" class="btn btn-success" style="padding: 5px;"><span style="color: white">Start course</span></a>
+			</div>                                        
+		</div>                              	
+	</div>
+
+	<div class="row">
+		<div class="comments-container">
+			<h1>Reviews</h1>
+
+			<ul id="comments-list" class="comments-list">
+				<li>
+					<div class="comment-main-level">
+						<!-- Avatar -->
+						<div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
+						<!-- Contenedor del Comentario -->
+						<div class="comment-box">
+							<div class="comment-head">
+								<h6 class="comment-name"><a href="http://creaticode.com/blog">Jon Snow</a></h6>
+								<span>1 hour ago</span>
+								<i class="fa fa-reply"></i>
+								<i class="fa fa-heart"></i>
+							</div>
+							<div class="comment-content">
+								Great course!
+							</div>
+						</div>
+					</div>
+					<!-- Respuestas de los comentarios -->
+
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>

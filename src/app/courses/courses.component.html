@@ -1,0 +1,26 @@
+<style>
+    h3 {
+        text-align: center;
+    }
+    
+    p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+</style>
+<h3>Courses</h3>
+
+<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+<div class="row">
+    <div class="card col-md-4 col-sm-6 col-12" *ngFor="let course of courses">
+        <img class="card-img-top" src="{{course.imageUrl}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{course.name}}</h5>
+            <p class="card-text">{{course.description}}</p>
+            <a href="courses/details/{{course.id}}" class="btn btn-primary">View more</a>
+        </div>
+    </div>
+</div>
