@@ -9,18 +9,35 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
     }
+    
+    input {
+        border-radius: 5px;
+    }
 </style>
 <h3>Courses</h3>
 
-<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+<div class="container">
+    <div class="row" style="margin-bottom: 20px;">
+        <div style="margin:auto;width:75%;">
+            <!-- <span class="text-center">
+                <i class="fa fa-search" aria-hidden="true" style="text-align:center;"></i>
+            </span>
+            <input style="display:inline;" #searchBox id="search-box" (keyup)="search(searchBox.value)" class="form-control form-control-md w-100" type="text" placeholder="Search" aria-label="Search"> -->
+            <i class="fa fa-search" aria-hidden="true" style="margin-right:15px;"></i>
+            <input #searchBox id="search-box" (keyup)="search(searchBox.value)" style="display:inline; width:85%;" type="text" placeholder="Search" aria-label="Search">
+        </div>
+    </div>
 
-<div class="row">
-    <div class="card col-md-4 col-sm-6 col-12" *ngFor="let course of courses">
-        <img class="card-img-top" src="{{course.imageUrl}}" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{course.name}}</h5>
-            <p class="card-text">{{course.description}}</p>
-            <a href="courses/details/{{course.id}}" class="btn btn-primary">View more</a>
+
+    <div class="row">
+        <div class="card col-md-4 col-sm-6 col-12" *ngFor="let course of courses">
+            <img style="margin-top: 10px" *ngIf="course.imageUrl" class="card-img-top" src="{{course.imageUrl}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{course.name}}</h5>
+                <p class="card-text">{{course.description}}</p>
+                <a href="courses/details/{{course.id}}" class="btn btn-primary">View more</a>
+            </div>
         </div>
     </div>
 </div>
+<!-- <input #searchBox id="search-box" (keyup)="search(searchBox.value)" /> -->

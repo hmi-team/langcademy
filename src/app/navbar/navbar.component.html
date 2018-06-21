@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"></a>
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -17,6 +17,19 @@
                 <a class="nav-link" href="/courses/create">Create Course</a>
             </li>
 
+            <!-- <li class="nav-item" *ngIf="!currentUser?.firstName" style="float:right;">
+                <a class="nav-link" href="/register">Register</a>
+            </li>
+            <li class="nav-item" *ngIf="!currentUser?.firstName" style="float:right;">
+                <a class="nav-link" href="/login">Login</a>
+            </li> -->
+
+            <!-- <li *ngIf="currentUser?.firstName" class="nav-item" style="float: right;">
+                <a class="nav-link" [routerLink]="['/login']">Logout</a>
+            </li> -->
+
+
+            <!-- </div> -->
             <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown
@@ -34,10 +47,34 @@
             <!-- TODO: Show username when user is logged or register/login when he's not. -->
 
         </ul>
-        <!-- TODO add external css-->
-        <div style="float:right;">
-            <span *ngIf="currentUser?.firstName">Hi {{currentUser.firstName}}!</span>
-            <span *ngIf="!currentUser?.firstName">Register or Login</span>
+        <div class="collapse navbar-collapse" style="float:right;">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="!currentUser?.firstName" style="float:right;">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+                <li class="nav-item" *ngIf="!currentUser?.firstName" style="float:right;">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <!-- <p></p> -->
+                <!-- <div style="float:right;"> -->
+
+                <li class="nav-item" *ngIf="currentUser?.firstName" style="float:right;">
+                    <a class="nav-link" href="#">Hi {{currentUser.firstName}}!</a>
+                </li>
+
+                <li *ngIf="currentUser?.firstName" class="nav-item" style="float: right;">
+                    <a class="nav-link" [routerLink]="['/login']" onclick="window.location.reload()">Logout</a>
+                    <!-- <a class="nav-link" href="/login">Login</a> -->
+                </li>
+            </ul>
         </div>
+        <!-- TODO add external css-->
+        <!-- <div style="float:right;">
+            <span *ngIf="currentUser?.firstName">Hi {{currentUser.firstName}} {{currentUser.lastName}}!</span>
+            <span *ngIf="!currentUser?.firstName">Register or Login</span>
+            <ul>
+
+            </ul>
+        </div> -->
     </div>
-    </nav>
+</nav>

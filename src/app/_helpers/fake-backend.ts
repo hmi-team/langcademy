@@ -30,26 +30,46 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         if (courses.length < 1){
             courses.push({
                 id: 1001,
-                name: 'Deep learning',
-                description: 'Deep learning fundamentals',
+                name: 'Neural Networks',
+                description: 'Quick overview of Neural Networks, followed by a few interesting materials concerning convolutional neural networks and recurrent neural networks by Andrej Karpathy.',
                 imageUrl: 'https://zdnet4.cbsistatic.com/hub/i/2018/04/13/36c52953-7ab9-4608-a848-71d1d538856e/2cad00bf6c3dc3ff21009836b989cda7/td-deep-learning.jpg',
                 materials: [
-                    {id: 10011, name:'Intro', type: 'Text', text: 'This course explores the fundamentals of deep learning. Good luck!' },
-                    {id: 10012, name:'Coursera course', description: 'Coursera course by Andrew Ng', type: 'Link', url: 'https://www.coursera.org/learn/machine-learning/home/welcome'},
-                    {id: 10013, name:'Finished link', description: 'Finished coursera link', type: 'Text', text:'How was it? Wanna do a test?'},
-                    {id: 10014, name:'Finish', description: 'You finished the course', type: 'Text', text:'Congtats'}
+                    {id: 10011, name:'Intro', type: 'Text', duration: '1 minute', text: 'In out firm neural networks are an essential part of our work. Every employee must be familiar with the basic concepts for neural networks. We have carefully collected several materials we want everybody to have red. Good luck and dont be shy to ask questions!' },
+                    {id: 10012, name:'Placement test', type: 'Test', duration: '2 minutes', text: 'Test your knowledge before you start!' },
+                    {id: 10013, name:'But what *is* a Neural Network?', duration: '19 minutes', type: 'Video', text: 'An excellent video exploring the basics of a neural network.', url: 'https://www.youtube.com/embed/aircAruvnKk'},
+                    {id: 10014, name:'CS231n: Convolutional Neural Networks', type: 'Link', duration: '12 minutes', text: 'Convolutional neural networks are commonly used in our projects. This article by the famous Andrej Karpathy is a great way to get into the concepts.', url: 'http://cs231n.github.io/convolutional-networks/'},
+                    {id: 10015, name:'The Unreasonable Effectiveness of Recurrent Neural Networks', type: 'Link', duration: '14 minutes', text:'Recurrent neural networks have proven to be a surprisingly efficient way train our models dealing with natural language proccesing. This article is a must for everybody participating in a NLP project!', url: 'http://karpathy.github.io/2015/05/21/rnn-effectiveness/'},
+                    {id: 10016, name:'10 misconceptions about Neural Networks', type: 'Link', duration: '8 minutes', text:'And lastly, a bit more entertaining article looking into some common misconceptions about neural networks. This article is not required but we find it quite helpful.', url: 'http://www.turingfinance.com/misconceptions-about-neural-networks/'},
+                    {id: 10017, name:'Final test', type: 'Test', duration: '4 minutes', text:''}
                 ]
             });
 
             courses.push({
                 id: 1002,
-                name: 'Animals',
-                description: 'Learn the names of animals',
-                imageUrl: 'https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/956224/1160/772/m1/fpnw/wm0/naturalwildfriendssafarianimals_package-4-.jpg?1454449970&s=d1df7e101cc936fd62b64be6f49ac4d3',
-                materials: [
-                    {id: 10021, name:'Intro', type: 'Text', text: 'This course explores the fundamentals of deep learning. Good luck!' },
-                    {id: 10022, name:'Coursera course', description: 'Coursera course by Andrew Ng', type: 'Link', url: 'https://www.coursera.org/learn/machine-learning/home/welcome'}
-                ]
+                name: 'Logistic regression',
+                description: 'The basics for logistic regression. Logistic regression is used widely in the training of our most basic models.',
+                imageUrl: 'https://i2.wp.com/www.puzzlr.org/wp-content/uploads/2016/10/LogisticRegression-pic.png?fit=499%2C307'
+            });
+
+            courses.push({
+                id: 1003,
+                name: 'NLP',
+                description: 'Natural language processing is an important part of our company and we have may projects using it.',
+                imageUrl: 'https://www.themavencircle.com/wp-content/uploads/2016/03/Neuro-linguistic-Programming-650x435.jpg'
+            });
+
+            courses.push({
+                id: 1004,
+                name: 'Embeddings',
+                description: 'Embeddings are very important part for our NLP team. Every member of this team must have an in-depth understanding of the concepts of embeddings!',
+                imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19dj2tzI2om9q7Ma1QnxiXZZ-IocctLOAkXE8Mlz8BV-IOsO3jw'
+            });
+
+            courses.push({
+                id: 1005,
+                name: 'Feature engineering',
+                description: 'Feature engineering is also an important part of our day to day work.',
+                imageUrl: 'https://api.ning.com/files/ewwzspTVVqZ7yGyi4JAL8UaSr7FgAFg4HhNKRKM51v3ofDqR0VcBGJkio9C6je8BKC7DeCrxiZ91hpB0c*C6RlNOd04RPyK2/powertools.png'
             });
         }
 
